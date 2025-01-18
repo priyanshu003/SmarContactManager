@@ -11,5 +11,7 @@ import com.scm.models.User;
 public interface UserRepository extends JpaRepository<User,String> {
 
    Optional<User> findUserByEmail(String email);
-  // Optional<User> findUserByEmailPassword(String email,String password);
+   Optional<User> findByEmailAndPassword(String email, String password);
+
+    Optional<User> findByEmailToken(String id);
 }

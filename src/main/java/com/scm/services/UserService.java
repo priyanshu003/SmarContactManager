@@ -52,7 +52,9 @@ public class UserService {
     }
 
     public Optional<User> findUserByEmail(String email) {
-        System.err.println(userRepository.findUserByEmail(email));
+        logger.info("find user by email" + email);
+        System.err.println(email + "email");
+        userRepository.findUserByEmail(email);
         return userRepository.findUserByEmail(email);
     }
 
